@@ -51,12 +51,12 @@ void loop() {
   }
   
   // We now create a URI for the request
-  String url = "/";
+  String url = "/devices/0/turn_on";
   Serial.print("Requesting URL: ");
   Serial.println(url);
   
   // This will send the request to the server
-  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
+  client.print(String("POST ") + url + " HTTP/1.1\r\n" +
                "Host: " + host + "\r\n" + 
                "Connection: close\r\n\r\n");
   delay(500);
