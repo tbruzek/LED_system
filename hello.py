@@ -10,7 +10,7 @@ def home():
 def turn_on():
 	#f = open('/tmp/light', 'w')
 	#f.write('ON')
-	return render_template('index_1.html', r = 255, g = 255, b = 255)
+	return render_template('index_1.html', state = value)
 
 #@app.route('/device_states', methods = ['POST'])
 #def change():
