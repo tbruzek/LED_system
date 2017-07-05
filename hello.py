@@ -7,10 +7,13 @@ def home():
 	return render_template('index.html')
 
 @app.route('/devices/0/turn_on', methods = ['POST'])
-def turn_on():
-	f = open('/tmp/light', 'w')
-	f.write('ON')
-	return render_template('index_1.html')
+def turn_on(state = 'ON'):
+	#f = open('/tmp/light', 'w')
+	#f.write('ON')
+	return render_template('index_1.html', state = 'hi')
+
+@app.route('/device_states', methods = ['POST'])
+def change():
 
 
 if __name__ == "__main__":
