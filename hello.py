@@ -8,8 +8,8 @@ def home():
 
 @app.route('/devices/0/turn_on', methods = ['POST'])
 def turn_on():
-    state = request.form[data]
-    return render_template('index_1.html', state = state)
+    state = request.form['data']
+    return render_template('index_1.html')
 
 #@app.route('/device_states', methods = ['POST'])
 #def change():
