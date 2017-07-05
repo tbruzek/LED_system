@@ -12,8 +12,8 @@ def turn_on(state = 'ON'):
 	#f.write('ON')
 	return render_template('index_1.html', state = 'hi')
 
-@app.route('/device_states', methods = ['POST'])
-def change():
+#@app.route('/device_states', methods = ['POST'])
+#def change():
 
 
 if __name__ == "__main__":
