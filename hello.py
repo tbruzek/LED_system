@@ -5,12 +5,13 @@ app = Flask(__name__)
 
 def switch_light(color):
     print(color)
-    f = open('/colors', 'w')
-    f.write(color)
+
 
 @app.route('/', methods = ['GET'])
 def home():
 	return render_template('index.html')
+
+
 
 #@app.route('/devices/0/turn_on', methods = ['POST'])
 #def turn_on():
@@ -20,6 +21,8 @@ def home():
 @app.route('/device_states', methods = ['POST'])
 def change():
     state = request.values.get('color')
+    f = open('/device_states', 'w')
+    f.write(color)
     switch_light(state)
     return render_template('index_1.html', state=state)
 
