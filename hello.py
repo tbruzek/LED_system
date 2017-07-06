@@ -24,8 +24,8 @@ def home():
 def change():
     state = request.values.get('color')
    #switch_light(state)
-    render_template('index_1.html', state=state)
-    return redirect(url_for('home'))
+    return render_template('index_1.html', state=state)
+    #return redirect(url_for('home'))
 
 if __name__ == "__main__":
     app.run(host = '0.0.0.0', debug = True)
