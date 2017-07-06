@@ -10,7 +10,7 @@ def home():
 @app.route('/devices/0/turn_on', methods = ['POST'])
 def turn_on():
     #state = request.values.get('name')
-    state = request.form['submit']
+    state = request.form['color']
     return render_template('index_1.html', state = state)
 
 #@app.route('/device_states', methods = ['POST'])
