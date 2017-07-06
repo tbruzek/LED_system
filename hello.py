@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from flask import request
 app = Flask(__name__)
 
 @app.route('/', methods = ['GET'])
@@ -8,8 +9,8 @@ def home():
 
 @app.route('/devices/0/turn_on', methods = ['POST'])
 def turn_on():
-    state = request.form['data']
-    return render_template('index_1.html')
+    state = request.form['255,255,000']
+    return render_template('index_1.html', state = state)
 
 #@app.route('/device_states', methods = ['POST'])
 #def change():
