@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 def switch_light(color):
     print(color)
-    f.open('stuff.txt', 'w')
+    f = open('stuff.txt', 'w')
     f.write(color)
 
 
