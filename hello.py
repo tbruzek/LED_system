@@ -22,8 +22,8 @@ def home():
 def change():
     state = request.values.get('color')
     f = open('/device_states', 'w')
-    f.write(color)
-    switch_light(state)
+    f.write(state)
+   #switch_light(state)
     return render_template('index_1.html', state=state)
 
 if __name__ == "__main__":
