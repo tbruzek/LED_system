@@ -31,5 +31,9 @@ def change():
     return render_template('index_1.html', state=state)
     #return redirect(url_for('home'))
 
+@app.route('/color', methods = ['POST'])
+def get_color():
+    return render_template('index_2.html')
+
 if __name__ == "__main__":
     app.run(host = '0.0.0.0', debug = True)
