@@ -7,10 +7,10 @@ app = Flask(__name__)
 
 def switch_light(color):
     print(color)
-    #f = open('stuff.txt', 'w')
-    #f.write(color)
-    with open('stuff.txt', 'w') as f:
-        f.write(str(color))
+    f = open('stuff.txt', 'w')
+    f.write(str(color))
+    #with open('stuff.txt', 'w') as f:
+     #   f.write(str(color))
 
 
 @app.route('/', methods = ['GET'])
