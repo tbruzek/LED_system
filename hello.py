@@ -3,6 +3,9 @@ from flask import render_template
 from flask import request
 app = Flask(__name__)
 
+def switch_light(color):
+    print(color)
+
 @app.route('/', methods = ['GET'])
 def home():
 	return render_template('index.html')
@@ -15,6 +18,7 @@ def home():
 @app.route('/device_states', methods = ['POST'])
 def change():
     state = request.values.get('color')
+    switch_light(state)
     return render_template('index_1.html', state=state)
 
 if __name__ == "__main__":
