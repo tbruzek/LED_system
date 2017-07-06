@@ -10,12 +10,12 @@ def home():
 @app.route('/devices/0/turn_on', methods = ['POST'])
 def turn_on():
     state = request.values.get('color')
-    #state = request.form['color']
     return render_template('index_1.html', state = state)
 
-#@app.route('/device_states', methods = ['POST'])
-#def change():
-
+@app.route('/device_states', methods = ['POST'])
+def change():
+    state = request.values.get('color')
+    return render_template('index_1.html', state=state)
 
 if __name__ == "__main__":
     app.run(host = '0.0.0.0')
