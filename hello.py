@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 def switch_light(color):
     print(color)
-    f = open('stuff.txt', 'w')
+    f = open('stuff.html', 'w')
     f.write(str(color))
     #with open('stuff.txt', 'w') as f:
      #   f.write(str(color))
@@ -33,7 +33,7 @@ def change():
 
 @app.route('/color', methods = ['POST'])
 def get_color():
-    return render_template('index_2.html')
+    return render_template('stuff.html')
 
 if __name__ == "__main__":
     app.run(host = '0.0.0.0', debug = True)
