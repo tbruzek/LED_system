@@ -21,7 +21,7 @@ def home():
 @app.route('/device_states', methods = ['POST'])
 def change():
     state = request.values.get('color')
-    f = open('/device_states', 'w')
+    f = open('/device_states', methods = ['POST'])
     f.write(state)
    #switch_light(state)
     return render_template('index_1.html', state=state)
