@@ -3,13 +3,12 @@ from flask import render_template
 from flask import request
 from flask import redirect
 from flask import url_for
-import os
 app = Flask(__name__)
 
 def switch_light(color):
     print(color)
     f = open('stuff.txt', 'w')
-    f.write(color + os.linesep)
+    f.write(color)
 
 
 @app.route('/', methods = ['GET'])
