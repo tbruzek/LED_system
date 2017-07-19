@@ -5,13 +5,6 @@ from flask import redirect
 from flask import url_for
 app = Flask(__name__)
 
-def switch_light(color):
-    print(color)
-    f = open('stuff.html', 'w')
-    f.write(str(color))
-    #with open('stuff.txt', 'w') as f:
-     #   f.write(str(color))
-
 
 @app.route('/', methods = ['GET'])
 def home():
@@ -29,7 +22,6 @@ def change():
     state = request.values.get('color')
     switch_light(state)
     return render_template('index_1.html', state=state)
-    #return redirect(url_for('home'))
 
 @app.route('/color', methods = ['POST'])
 def get_color():

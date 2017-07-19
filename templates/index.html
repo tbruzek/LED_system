@@ -1,11 +1,23 @@
 <html>
 <head>
-	<title>LED Control Panel</title>
+
+	<script>
+	function myFunction() {
+    	document.getElementById("demo").innerHTML = "255,255,0";
+	}
+	</script>
+
+	<title id="demo"></title>
+
 </head>
 <body>
 	<h1>LED Control Panel</h1>
 	<p>Just testing</p>
-	
+
+	<button type="button" onclick="myFunction()">Try it</button>
+
+
+
 	<form action="/device_states" method="post">
 		<input type = "hidden" name = "color" value="255,255,000">
 		<input type="submit" value ="            ">
