@@ -5,7 +5,7 @@
 #include <ESP8266WiFi.h>
  
 const char* ssid     = "DragonNet 2.4";
-const char* password = "InternetPa55word";
+const char* password = "";
  
 const char* host = "192.168.6.126";
  
