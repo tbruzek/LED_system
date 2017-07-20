@@ -5,7 +5,7 @@
 #include <ESP8266WiFi.h>
  
 const char* ssid     = "DragonNet 2.4";
-const char* password = "";
+const char* password = "InternetPa55word";
  
 const char* host = "192.168.6.126";
  
@@ -56,7 +56,7 @@ void loop() {
   Serial.println(url);
   
   // This will send the request to the server
-  client.print(String("POST ") + url + " HTTP/1.1\r\n" +
+  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
                "Host: " + host + "\r\n" + 
                "Connection: close\r\n\r\n");
   delay(500);

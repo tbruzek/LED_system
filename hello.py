@@ -11,7 +11,6 @@ def home():
 	return render_template('index.html')
 
 
-
 #@app.route('/devices/0/turn_on', methods = ['POST'])
 #def turn_on():
     #state = request.values.get('color')
@@ -20,12 +19,12 @@ def home():
 @app.route('/device_states', methods = ['POST'])
 def change():
     state = request.values.get('color')
-    switch_light(state)
-    return render_template('index_1.html', state=state)
+    print(state)
+    return render_template(url_for('home'))
 
 @app.route('/color', methods = ['POST'])
 def get_color():
-    return render_template('/../stuff.html')
+    return render_template(url_for('home'))
 
 if __name__ == "__main__":
     app.run(host = '0.0.0.0', debug = True)
