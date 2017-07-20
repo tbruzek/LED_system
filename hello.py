@@ -20,11 +20,11 @@ def home():
 def change():
     state = request.values.get('color')
     print(state)
-    return render_template(url_for('home'))
+    return redirect(url_for('home'))
 
 @app.route('/color', methods = ['POST'])
 def get_color():
-    return render_template(url_for('home'))
+    return redirect(url_for('home'))
 
 if __name__ == "__main__":
     app.run(host = '0.0.0.0', debug = True)
